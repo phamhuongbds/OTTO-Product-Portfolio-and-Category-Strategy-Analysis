@@ -1,0 +1,548 @@
+retailer,product_count,brand_count,avg_price,sold_out_products,sold_out_rate
+OTTO,426,280,337.51,107,25.12
+L�chel Industriebedarf,108,15,256.01,12,11.11
+K. S. company GmbH,90,1,16.8,6,6.67
+Color-D Textile GmbH,83,1,24.08,2,2.41
+Home & Play,55,1,27.17,0,0
+DeinDesign,49,1,23.28,0,0
+schutzfolien24,38,3,14.84,0,0
+mirapodo #ft5_slash# myToys,34,30,43.14,1,2.94
+atFoliX,30,2,8.42,0,0
+WE LOVE BAGS,28,25,123.37,23,82.14
+Mary & Paul,24,21,73.97,14,58.33
+vidaXL,22,5,99.8,12,54.55
+Posterlounge,20,1,10.5,2,10
+Electropapa,19,1,28.76,7,36.84
+Popken Fashion Group,18,3,60.1,11,61.11
+neuetischkultur,17,6,128.46,9,52.94
+wc-gestalten,15,3,129.25,0,0
+PHS-electronic gmbh,15,1,59.22,1,6.67
+Next Germany GmbH,15,1,27.4,4,26.67
+heyconnect,14,13,97.1,5,35.71
+Fit4Style Silberschmuck - IMPPAC,14,8,92.95,8,57.14
+ETC-Shop,13,3,142.96,1,7.69
+Relaxdays,13,1,45.99,6,46.15
+Mr. & Mrs. Panda,12,1,17.4,0,0
+Wallario,12,1,36.78,0,0
+WrapUp GmbH,10,10,34.54,3,30
+Esprit,10,5,39.89,6,60
+click-licht,10,2,80.93,1,10
+Frankonia,9,7,151.1,1,11.11
+Horror-Shop,9,4,22.12,4,44.44
+style3,9,2,21.46,0,0
+Cadorabo-Shop,9,1,18.32,0,0
+Moebelnet,9,1,267.53,4,44.44
+Wigento,9,1,12.91,0,0
+Lomadox,9,1,347.86,1,11.11
+mantraroma,9,1,39.68,1,11.11
+CHRIST Juweliere und Uhrmacher seit 1863,8,8,323.79,3,37.5
+vonderpalette,8,1,368.7,0,0
+Olano GmbH,7,7,134.42,5,71.43
+Bettklusiv GmbH,7,7,50.36,3,42.86
+EMAKO,7,5,25.7,2,28.57
+ICED OUT,7,4,43.19,0,0
+MOTIVISSO,7,2,15.61,0,0
+s.Oliver,7,2,51.79,2,28.57
+Primedeco,7,1,53.54,0,0
+DesFoli,7,1,26.99,0,0
+Shirtracer,7,1,22.9,0,0
+premiumXL,7,1,819.79,0,0
+KW-Commerce,6,2,16.82,3,50
+JV Möbel,6,1,3504.17,0,0
+Pixxprint,6,1,26.62,0,0
+AGI Shop,6,1,35.33,1,16.67
+Guru-Shop,6,1,90.57,1,16.67
+Feldherr GmbH,6,1,33.56,0,0
+matches21 HOME & HOBBY,6,1,17.16,0,0
+KUNSTLOFT,6,1,132.12,1,16.67
+Outlet46,5,5,34.39,1,20
+GoJungo GmbH,5,5,53.56,3,60
+Internetstores,5,5,104.19,2,40
+Rosenthal GmbH,5,4,58,0,0
+KTK Handel,5,4,22.63,5,100
+Fotoalben-Discount,5,3,10.96,0,0
+PRIARA,5,2,54.21,0,0
+Erwin Müller,5,2,16.86,3,60
+SECOMP Electronic Components GmbH,5,2,17.81,0,0
+Aosom DE,5,2,81.1,3,60
+E-Gerry Weber Digital GmbH,5,2,59.19,4,80
+eVendix,5,1,13.63,0,0
+König Design,5,1,15.59,0,0
+Price-Guard,4,4,188.15,3,75
+Luxentu,4,4,38.21,2,50
+Gomazing,4,4,35.74,0,0
+METAMORPH,4,4,47.41,0,0
+GUTE MARKEN,4,4,90.73,0,0
+schuhe|kaufen,4,4,84.65,3,75
+camXpert GmbH,4,4,39.99,2,50
+bmf-versand,4,3,27.06,1,25
+IM-Trading,4,3,22.21,0,0
+Schuhe-Trentasette,4,3,57.41,0,0
+Villeroy & Boch,4,2,101.18,2,50
+Wall-Art,4,2,39.99,0,0
+MobiloTec,4,2,42.85,0,0
+Duckshop,4,2,11.49,1,25
+Office Partner,4,2,360.7,1,25
+Schöner Leben Shop,4,1,43.7,0,0
+Junado,4,1,841.5,2,50
+Soreso,4,1,32.42,0,0
+dekodino®,4,1,17.95,0,0
+SEBSON,4,1,25.99,1,25
+OSTSEE-SCHMUCK,4,1,111.47,0,0
+Kiebel,4,1,1586.5,2,50
+BUTLERS,4,1,65.74,0,0
+AkkuShop Deutschland,4,1,44.65,1,25
+S&O Handelsgesellschaft mbH,4,1,4.89,0,0
+expendio,4,1,1091.5,0,0
+Juvalia,3,3,74.63,1,33.33
+surf4shoes,3,3,135.95,1,33.33
+Babyshoppen,3,3,160.62,0,0
+engelhorn,3,3,79.93,1,33.33
+Sandritas,3,3,42.3,0,0
+Fashion and Sports,3,3,28.58,1,33.33
+Sport Klingenmaier,3,3,53.28,0,0
+natürlich24,3,3,72.94,1,33.33
+Salamander,3,3,123.28,0,0
+Skapetze Lichtmacher,3,3,294.67,0,0
+Sports-Box,3,3,134.77,1,33.33
+in-trading Handelsgesellschaft mbH,3,3,64.23,2,66.67
+440s - for fourties,3,3,42.56,0,0
+P4 Markets,3,3,40.25,2,66.67
+OTTO Office,3,3,282.02,0,0
+found4you,3,2,66.83,0,0
+Living Stars,3,2,23.96,0,0
+Tom Tailor E-Commerce GmbH,3,2,51.66,1,33.33
+meinemarkenmode,3,2,42.32,0,0
+sportboerse-shop,3,2,579.65,2,66.67
+Traumpreisfabrik,3,2,25.32,0,0
+BOSEWEK GmbH,3,2,22.87,1,33.33
+moebel-direkt.de GmbH,3,2,307.67,0,0
+Mustbuy GmbH,3,2,119.99,0,0
+FALKE,3,2,20.67,0,0
+VBS Hobby,3,2,9.12,1,33.33
+bearse,3,1,35.19,0,0
+Bilderdepot24,3,1,9.99,0,0
+Photocircle,3,1,57.15,0,0
+Kiss of Leather,3,1,15.99,1,33.33
+banjado,3,1,73.99,0,0
+Mucola,3,1,111.23,0,0
+BEARSU,3,1,28.24,0,0
+GOLDNER,3,1,68.23,0,0
+Massivmoebel24,3,1,489.9,0,0
+feldmann-wohnen,3,1,1065.33,0,0
+G-S4LL,3,1,259,0,0
+KraftKids,3,1,39.29,0,0
+AkkuGigant,3,1,206.69,1,33.33
+Akowi,3,1,15.57,0,0
+CoolGadget,3,1,12.29,2,66.67
+unbespielt,3,1,34.57,0,0
+venize,2,2,19.99,0,0
+Berlin Brands Group,2,2,164.99,0,0
+Schuhkings,2,2,119.95,1,50
+d-onlinehandel,2,2,24.74,0,0
+Steinchenwelt,2,2,94.09,2,100
+hobbyshop-mona,2,2,27.98,1,50
+keepdrum,2,2,289.9,1,50
+DaGecko,2,2,43.4,0,0
+Livario,2,2,39.99,2,100
+voelkner - direkt guenstiger,2,2,12.88,0,0
+Hemden-Meister#ft5_slash#Mode Schödlbauer,2,2,83.95,0,0
+onQuality,2,2,79.45,1,50
+Foto Erhardt GmbH,2,2,334.5,0,0
+Clic-Trade GmbH,2,2,237.49,1,50
+Lieblingsleuchten,2,2,462.82,0,0
+Mawoo,2,2,51,1,50
+Trachtenland,2,2,23.42,0,0
+Watchroom24,2,2,44.45,0,0
+REITSPORT24,2,2,89.95,0,0
+Sport Hopfmann GmbH,2,2,72.49,0,0
+Miweba GmbH,2,2,46.45,0,0
+VAN GRAAF,2,2,224.99,2,100
+Protinam,2,2,31.24,1,50
+eurotrade,2,2,18.75,1,50
+Gardinen-Center,2,2,22.49,0,0
+Tamara Lederwaren,2,2,65.99,2,100
+modeherz,2,2,298,1,50
+Casa Due pur,2,2,73.34,0,0
+Netzwerkartikel,2,2,108.58,1,50
+Stellfeld & Ernst,2,2,47.5,0,0
+Catch the Patch,2,2,4.74,0,0
+Hutshopping,2,2,59.95,0,0
+Holzenplotz,2,2,110.43,0,0
+svh24,2,2,212.99,0,0
+MUSIC STORE professional GmbH,2,2,63.25,0,0
+Alpenclassics,2,2,132.44,0,0
+H4G GmbH,2,2,51.45,0,0
+Badorado Warenhandels GmbH & Co. KG,2,2,62.49,0,0
+Deuba GmbH & Co. KG,2,2,42.45,0,0
+Uhren4you,2,2,177,2,100
+woolloom,2,2,46.5,0,0
+haustechnikpartner24,2,2,368,0,0
+Ayazo,2,2,73.04,1,50
+RHG Onlinehandels GmbH,2,2,10.35,0,0
+Tauro,2,2,77.45,1,50
+SatChef,2,2,13.95,0,0
+Styledorado,2,2,48.99,1,50
+funpreis,2,2,40.9,0,0
+marussia,2,1,18.19,0,0
+daslagerhaus living,2,1,344,0,0
+OneRedox,2,1,34.9,2,100
+Perfekt Wohnen,2,1,18.73,0,0
+moebelando,2,1,172.45,0,0
+ROCKBROS_Europe,2,1,39.27,0,0
+Eltrato,2,1,9.49,0,0
+DECN Handel UG,2,1,47.49,0,0
+kuechen-preisbombe,2,1,479.99,0,0
+Licht-Erlebnisse,2,1,51.95,0,0
+Juniqe,2,1,48.99,0,0
+FineBuy,2,1,124.95,1,50
+Multistore 2002,2,1,36.49,1,50
+BF-Commerce GmbH,2,1,12.99,0,0
+DBSW Trading GmbH,2,1,11.4,0,0
+My Gads,2,1,19.45,1,50
+The Outlet 24,2,1,104.9,0,0
+FDS GmbH,2,1,35.49,1,50
+2JB,2,1,24.99,0,0
+DeFacto,2,1,13.9,0,0
+Ofenoutlet,2,1,1049,1,50
+Colognebelt,2,1,18.9,0,0
+ECD Germany,2,1,77.41,1,50
+Tomi-Otto,2,1,17.21,1,50
+Stahl-Design Tebart GmbH & Co. KG,2,1,96.39,1,50
+Logbuch-Verlag,2,1,11.9,0,0
+Ganz Einfach,2,1,59.45,1,50
+SYSTEMTREFF,2,1,535.9,0,0
+Preiswert24,2,1,111.15,0,0
+GOLDBLACK,2,1,74,0,0
+gutline,2,1,83.99,0,0
+Inkadoo,2,1,24.48,2,100
+NINETEC GmbH,2,1,22.4,0,0
+LMshop,2,1,11.54,2,100
+MeetU,2,1,154.99,0,0
+Kreative Feder,2,1,67.45,0,0
+Schuhe Lüke,2,1,109.9,1,50
+Bungsa,2,1,20.99,0,0
+iz-el,2,1,38.4,0,0
+Giseke GmbH & Co. KG,2,1,33.9,1,50
+Paul Sinus Art,2,1,24,0,0
+ZMGMB,2,1,195.99,2,100
+Bergson,2,1,149.99,0,0
+https:#ft5_slash##ft5_slash#www.carpetia.de#ft5_slash#shop_content.php?coID=4,2,1,19.49,0,0
+Borento,2,1,629,0,0
+Sitheim,2,1,39.14,1,50
+dekojohnson,2,1,32.7,1,50
+creoven,2,1,257.23,0,0
+Mezken,2,1,199.93,0,0
+leuchtenladen,2,1,40.33,0,0
+mk-tronic,1,1,82.9,0,0
+JOHANENLIES,1,1,1395,0,0
+NERA GmbH,1,1,39.99,0,0
+4big.fun,1,1,43.98,0,0
+hausratplus,1,1,15.15,0,0
+GRÄWE,1,1,19.9,0,0
+Brillibrum GmbH,1,1,27,0,0
+Ludwig Artzt GmbH,1,1,39.95,0,0
+Stockshop.de,1,1,91.44,0,0
+Hometex Premium Textiles,1,1,12.99,0,0
+SANILO,1,1,99.98,0,0
+Schmidt Trading,1,1,39.99,0,0
+Planenscout GmbH,1,1,9.22,0,0
+nazar-wellness,1,1,22.95,0,0
+wometo,1,1,19.99,0,0
+Crazylifestyle,1,1,17.9,0,0
+RAUMTEXTILIENSHOP,1,1,23.9,0,0
+Vimoda Homestyle,1,1,16.79,0,0
+Bluespoon,1,1,84.99,0,0
+BRUBAKER (Der Schnellversender),1,1,29.99,0,0
+MOCAVI,1,1,39.95,0,0
+Goods & Gadgets GmbH,1,1,12.95,0,0
+engbers,1,1,179.95,0,0
+Timeless GmbH,1,1,49.9,0,0
+OSPIG ( Hersteller),1,1,99.95,0,0
+ANIK-Shop,1,1,11.83,0,0
+PANGU,1,1,59,0,0
+XHIRTS,1,1,35.95,0,0
+Eddie Bauer,1,1,39.95,0,0
+F76 Fashion GmbH,1,1,289,0,0
+Versandhandel Erwin Lücken,1,1,38.99,0,0
+TRENDY AND NEW,1,1,11.97,0,0
+Karisma Schmuck,1,1,29.29,0,0
+Juwelier-Bacak,1,1,70,0,0
+The Rock Shop,1,1,44.95,0,0
+Welt der Träume,1,1,59.99,0,0
+Kinderhaus-Blaubaer,1,1,25.95,0,0
+Figuren Shop GmbH,1,1,28.95,0,0
+Taschenkaufhaus,1,1,270,0,0
+Trachtenhof Nübler,1,1,59.95,0,0
+STILORD GmbH,1,1,99,0,0
+Crystal and Sage,1,1,34.9,0,0
+Techlando,1,1,39.9,0,0
+JANA.SHOP,1,1,25.9,0,0
+Eurotone,1,1,59.9,0,0
+MWT Mehrwegtoner,1,1,25.69,0,0
+Linger(y),1,1,49.95,0,0
+Sparsando,1,1,25.9,0,0
+MODALO,1,1,389,0,0
+KAALEE jewelry,1,1,49.9,0,0
+1A PHOTO PORST,1,1,29.95,0,0
+dercomputerladen,1,1,1059,0,0
+Wetterladen.de,1,1,31.89,0,0
+Materia Schmuck,1,1,64.95,0,0
+TRUSTKAUF ARENA,1,1,13.99,0,0
+JULIE & GRACE GmbH,1,1,32.9,0,0
+styleBREAKER,1,1,20.95,0,0
+HELBRECHT optics,1,1,29.99,0,0
+mr!trade,1,1,9.99,0,0
+Lederjacken24,1,1,179.9,0,0
+Memoryking,1,1,2.25,0,0
+Markenkoffer,1,1,22.26,0,0
+DC Dericompany,1,1,179.99,0,0
+Hustling Sharks,1,1,39.99,0,0
+Finest Trachten,1,1,71.91,0,0
+Blackskies,1,1,30.99,0,0
+Mc-Sell-UG,1,1,9.99,0,0
+HAMBURGER WEIHNACHTSKONTOR®,1,1,19.7,0,0
+Frau Wundervoll,1,1,4.98,0,0
+werkstatt-king,1,1,334.99,0,0
+DanDiBo,1,1,23.89,0,0
+ambico,1,1,49.9,0,0
+Procommerce,1,1,199.9,0,0
+VaGo GmbH,1,1,221.9,0,0
+linovum,1,1,79.9,0,0
+Monkimau,1,1,5.9,0,0
+Koi Herdecke Pool & Teich,1,1,219.9,0,0
+hofstein,1,1,84.99,0,0
+B.K.Licht,1,1,89.99,0,0
+ib-style GmbH,1,1,18.95,0,0
+Gravidus,1,1,15.59,0,0
+Ambiente und Object online GmbH,1,1,439,0,0
+https:#ft5_slash##ft5_slash#optimamoebel.de#ft5_slash#,1,1,59.95,0,0
+123moebel,1,1,65,0,0
+Furnicato,1,1,409,0,0
+Firma Hommel GbR,1,1,261.55,0,0
+Aquaristikwelt24,1,1,359,0,0
+Hollert,1,1,138.6,0,0
+Pro Inventive GmbH,1,1,19.99,0,0
+Haus der Marken Shop Obertshausen,1,1,74.95,0,0
+elbandi.de,1,1,44.95,0,0
+sneakerprofi,1,1,34.95,0,0
+antonversand,1,1,199.99,0,0
+PonyCycle GmbH,1,1,239,0,0
+MyMaxxi,1,1,29.9,0,0
+druck-expert,1,1,14.9,0,0
+poolladen,1,1,284.95,0,0
+Orident,1,1,34.99,0,0
+Gico Spielwaren,1,1,39.99,0,0
+KHEbikes1988,1,1,14.95,0,0
+Teddys Rothenburg,1,1,64.9,0,0
+okluge,1,1,15.59,0,0
+Aquagart,1,1,339.9,0,0
+Inkovideo GmbH & Co. KG,1,1,89.99,0,0
+preigu,1,1,29.53,0,0
+JuniorToys,1,1,11.11,0,0
+VaGo-Toys,1,1,18.99,0,0
+kletterbude,1,1,219,0,0
+Sport Butsch GmbH & Co.KG,1,1,159.99,0,0
+Contra Tischtennis Service,1,1,89.9,0,0
+SONNENSEGEL.guru,1,1,57.99,0,0
+Sporttrend 24,1,1,76.9,0,0
+Vevendo,1,1,119.9,0,0
+Sport Erdl,1,1,44.99,0,0
+Bravios Deutschland,1,1,179.9,0,0
+LuriX,1,1,39.9,0,0
+Ondis24,1,1,13.99,0,0
+simply4you,1,1,34.95,0,0
+mamino fashion,1,1,21.49,0,0
+Oefele Jagd & Outdoor Shop,1,1,34.99,0,0
+anndora,1,1,79.9,0,0
+MANAGERTOYS.de,1,1,18.99,0,0
+KS Laserdesign,1,1,14.95,0,0
+Zeitlounge,1,1,595,0,0
+Bodynova GmbH,1,1,39.95,0,0
+Timeshop24,1,1,1058,0,0
+Tuganna,1,1,178,0,0
+Strickmoden Bruno Barthel - maximo & CAPO,1,1,34.9,0,0
+Elbe,1,1,30.99,0,0
+denimbar,1,1,79.99,0,0
+Eisenvogel 2.0,1,1,17.85,0,0
+tomBrook GmbH,1,1,69.9,0,0
+ITG Lifestyle,1,1,59,0,0
+Nicki Druck,1,1,28.98,0,0
+WUUHOO,1,1,18.99,0,0
+Dinotech e.K.,1,1,419.79,0,0
+VON LILIENFELD,1,1,16.9,0,0
+Stadler Online GmbH,1,1,66.4,0,0
+Lemodo GmbH,1,1,22.95,0,0
+MeinJuwelier,1,1,79,0,0
+malito,1,1,34.95,0,0
+Fashion Wacky.,1,1,89.95,0,0
+Jeans-Manufaktur,1,1,69.95,0,0
+Setpoint Deutschland GmbH,1,1,240.99,0,0
+Hetzl & Hirsch,1,1,120,0,0
+softweary,1,1,379.99,0,0
+MamboCat,1,1,79.99,0,0
+DYT eCommerce,1,1,17.49,0,0
+Housewares Digital,1,1,8.49,0,0
+One Kitchen,1,1,90,0,0
+Coffee Friend,1,1,55,0,0
+Kasper Wohndesign,1,1,179,0,0
+APRICOT,1,1,24.95,0,0
+Zollner24,1,1,33.99,0,0
+BETTENRID GmbH,1,1,229,0,0
+Meisterei,1,1,30.99,0,0
+Glückskind,1,1,24.95,0,0
+"Dehner, Garten & Zoo",1,1,15.99,0,0
+Hyperooms,1,1,845,1,100
+Zolotoy,1,1,75,0,0
+Kinderspieleland,1,1,13.95,1,100
+Pierre Cardin,1,1,79.99,0,0
+EmDa Trading GmbH,1,1,19.99,0,0
+Melvin & Hamilton,1,1,189.9,1,100
+Schuhe Shop,1,1,59.95,1,100
+AmbrosyaDE,1,1,99.9,0,0
+FN,1,1,19.95,0,0
+Mosgo Fashion,1,1,19.9,0,0
+mediadeal GmbH,1,1,299,0,0
+Toner Kingdom,1,1,35.9,0,0
+Trendbereich,1,1,69.95,1,100
+Schuh-Weith,1,1,24.9,1,100
+tischsetmacher,1,1,22.8,0,0
+H&D shoes and more instlyle GmbH,1,1,89.99,1,100
+Markt-Bau,1,1,23.9,1,100
+koka.shop,1,1,6.9,0,0
+CoverKingz,1,1,8.99,0,0
+Wirelex GmbH,1,1,4.58,0,0
+Gozos,1,1,178,1,100
+MACOSA HOME,1,1,34.9,0,0
+Steelboxx,1,1,512.9,1,100
+Victor Store,1,1,39.99,0,0
+Sellbee GmbH,1,1,349,1,100
+Close Up,1,1,7.99,0,0
+WANDStyle,1,1,74.99,0,0
+58 auf'm Kessel,1,1,349,1,100
+Alsino,1,1,106.49,0,0
+moebel17,1,1,219.9,0,0
+LONNOL,1,1,99.99,1,100
+FixFone,1,1,5.45,0,0
+aby-fashion,1,1,39.95,1,100
+HBH HAMBURG BRAND HOUSE,1,1,159.95,0,0
+Quermalerei,1,1,64.35,1,100
+SHOEcity,1,1,97.99,0,0
+schuhplus - Schuhe in Übergrößen,1,1,119.16,0,0
+Wanderschuhe.net,1,1,190,0,0
+Stein-Experte,1,1,9.99,0,0
+CHOICENESS,1,1,89.95,1,100
+CHiLA GmbH,1,1,32.9,0,0
+Trollingshop GbR,1,1,24.95,0,0
+Linoows,1,1,22.95,1,100
+Sportwelt Mickan,1,1,14.95,0,0
+HELLER-SHOES,1,1,24.99,0,0
+Yourfashionplace,1,1,28.95,0,0
+Trend Shoes,1,1,4.95,0,0
+Oskar-Store,1,1,179.9,1,100
+Terra Home,1,1,1179.99,1,100
+Die Kleine Geschenkidee,1,1,12.99,0,0
+LogiConnection,1,1,14.95,0,0
+YDTK GmbH,1,1,18.99,0,0
+Goebel GmbH,1,1,74.65,0,0
+Kaffeeexpress24,1,1,11.99,0,0
+CARSTYLER®,1,1,249.99,0,0
+AMB Products,1,1,112.34,0,0
+Bodycheck,1,1,29,0,0
+Momelino & Naturfuß,1,1,149.99,0,0
+MADELEINE,1,1,79.95,0,0
+uhrenhuette,1,1,99.9,1,100
+Epoxy Shop,1,1,34.95,0,0
+TOP TWO online,1,1,58.99,0,0
+Pixxass.de,1,1,59.99,1,100
+Madatshop,1,1,76,1,100
+schmuck23,1,1,19.9,1,100
+Fantasie Blau,1,1,34.99,0,0
+Talk-Point GmbH,1,1,52.99,0,0
+DIETEC,1,1,910,0,0
+Homewit Direct,1,1,70.99,0,0
+Hometex exclusiv GmbH,1,1,19.95,0,0
+Sportshop-Triathlon,1,1,39.99,1,100
+HomebyHome,1,1,59.9,0,0
+rock-creek-store,1,1,39.9,0,0
+Almbock,1,1,399.99,0,0
+minifink Kindermode,1,1,27.9,1,100
+Ugreen Group GmbH,1,1,21.99,0,0
+Kranich-Shop,1,1,59.95,1,100
+nVOOD-Store,1,1,9.99,0,0
+IDEAL TREND GmbH,1,1,4.99,0,0
+Sport Schart [outdoor-trekking-fitness],1,1,59.95,1,100
+könige Hausedeko GmbH,1,1,256.99,0,0
+Christmas Shop,1,1,27.95,0,0
+1a-Handelsagentur,1,1,36.24,0,0
+One Home,1,1,22.9,1,100
+SoBuy,1,1,80.9,0,0
+Heim und Garten 24,1,1,269.9,0,0
+incubado,1,1,69.95,0,0
+LetGospt,1,1,16.99,0,0
+Casa Moro,1,1,139.9,0,0
+VASAGLE,1,1,89.99,0,0
+Eugad,1,1,73.99,0,0
+TeppichWorld,1,1,29.9,1,100
+3DEAL,1,1,63.32,0,0
+Madera Spielzeug,1,1,16,0,0
+fit4form GmbH,1,1,59.95,0,0
+Albatros International,1,1,79.95,0,0
+petit amour GmbH hamburg,1,1,19.9,0,0
+Asia Wohnstudio GmbH,1,1,19.9,1,100
+Andalous Dessous,1,1,20.9,0,0
+OBOY Retail GmbH,1,1,17.9,0,0
+einzigundartig,1,1,15.99,0,0
+AvaMia,1,1,19.99,0,0
+Dekohelden24,1,1,20,1,100
+HandtuchWelt,1,1,34.95,1,100
+WS-Trend,1,1,26.87,1,100
+Bella Carina,1,1,39,0,0
+ich-zapfe,1,1,870.91,0,0
+CARO-Möbel,1,1,9.98,0,0
+GMD Living,1,1,32.95,0,0
+heimtexhandel24,1,1,22.9,1,100
+nadycat,1,1,33.9,0,0
+LaEvitaBerlinia-Shop,1,1,49.9,0,0
+Staubsaugerladen.de Ihr Partner für Geräte und Zubehör,1,1,12.95,1,100
+Oriental Galerie,1,1,64.9,0,0
+LebensWohnArt,1,1,189.9,0,0
+moderne-wohnideen,1,1,126.99,0,0
+IBG GmbH,1,1,19.99,0,0
+Sibrise,1,1,80.95,0,0
+BaiBa Fashion Trading GmbH,1,1,34.95,0,0
+GUGGEN Mountain,1,1,26.9,0,0
+Delien,1,1,23.99,0,0
+Lingda GmbH,1,1,26.99,1,100
+Jung GmbH,1,1,32.9,0,0
+Lyunhing GmbH,1,1,134.99,1,100
+Flieks,1,1,229.99,0,0
+Decovi,1,1,75.9,0,0
+Innorido,1,1,39.99,1,100
+Möbel-Eins,1,1,509,0,0
+Vladon,1,1,321.99,0,0
+EinStein Diamant,1,1,454,0,0
+Möbel Direkt Online,1,1,69.99,0,0
+Elektropower GmbH,1,1,16.9,1,100
+CONCEPT Mode,1,1,5,1,100
+KARE,1,1,588.95,0,0
+CT Cool Time,1,1,69.9,1,100
+EJM Logistics,1,1,31.35,0,0
+Badeinrichtung-online-kaufen.de,1,1,492.2,0,0
+ETing,1,1,53.19,0,0
+napo-shop.de,1,1,39.99,1,100
+Kerzenboutique,1,1,15.6,0,0
+LÖNING Conceptstore & Onlineshop,1,1,69.96,1,100
+Looping-Lu,1,1,49.95,0,0
+INTERSPORT Schwab,1,1,69.99,1,100
+GreenFarm,1,1,23.98,0,0
+Bekleidungshäuser Karl Vockeroth GmbH,1,1,48.27,1,100
+Fine Goods Trading,1,1,79.99,0,0
+vomadi24,1,1,119,1,100
+Schraubenhimmel,1,1,85.13,1,100
+eluno24,1,1,16.91,1,100
+GuenstigEinrichten,1,1,329.99,0,0
+ani-one,1,1,26.9,1,100
+Trendmöbel24,1,1,239,0,0
+pbezler,1,1,12.95,0,0
+edel-optics,1,1,207,0,0
