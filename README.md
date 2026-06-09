@@ -98,7 +98,7 @@ QUALIFY ROW_NUMBER() OVER (
 Query Result:
 After deduplication, the table still contained 2,223 rows, identical to the original row count, which suggests the raw dataset was already mostly unique at this level of grouping.
 
-### 4.3 Dimension tables
+### 4.3  Create dimensional tables
 Dimension tables are created for brand, retailer, status, and category to store reusable descriptive attributes separately from the fact table, making the model cleaner, easier to query, and more suitable for future analysis.
 ~~~sql
 CREATE OR REPLACE TABLE `otto-ecommerce-analysis.otto_dataset_project.otto_brand` AS
@@ -120,7 +120,7 @@ FROM `otto-ecommerce-analysis.otto_dataset_project.clean_otto_products`
 WHERE breadcrumbs IS NOT NULL
 ORDER BY breadcrumbs;
 ~~~
-### 4.4 Fact table
+### 4.4  Create the fact table and the category levels for analysis
 This step builds the final fact table and extracts category levels from the breadcrumb path, creating a structured table for analysis.
 ~~~sql
 CREATE OR REPLACE TABLE `otto-ecommerce-analysis.otto_dataset_project.fact_products` AS
@@ -162,8 +162,8 @@ The final fact table combines the cleaned OTTO product data with extracted categ
 ## 5. Business questions
 ### 5.1 Which brands have the largest assortment and what is their pricing position?
 ~~~sql
-WITH brand_summary AS (
-  SELECT brand,
+WITH brand_summary AS 
+  (SELECT brand,
     COUNT(*) AS product_count,
     ROUND(AVG(price),2) AS avg_price
   FROM `otto-ecommerce-analysis.otto_dataset_project.fact_products`
@@ -174,3 +174,60 @@ SELECT *
 FROM brand_summary
 ORDER BY product_count DESC, avg_price DESC;
 ~~~
+Query Result: 
+| Brand | Product Count | Avg Price (€) |
+|---------|-------------:|-------------:|
+| K-S-Trade | 90 | 16.80 |
+| Abakuhaus | 83 | 24.08 |
+| CALVENDO | 55 | 27.17 |
+| Reyher | 50 | 399.82 |
+| DeinDesign | 49 | 23.28 |
+| SONSTIGE | 35 | 195.16 |
+| atFoliX | 23 | 9.07 |
+| Posterlounge | 20 | 10.50 |
+| vhbw | 19 | 28.76 |
+| vidaXL | 18 | 114.69 |
+
+*Full result table refers to file Result 5.1*
+
+The result shows that the brands with the largest assortments are K-S-Trade, Abakuhaus, CALVENDO, Reyher, and DeinDesign. Their pricing positions are very different: some are value-oriented, like K-S-Trade and atFoliX, while others are premium positioned, especially Reyher and SONSTIGE, which have much higher average prices.
+
+### 5.2 Which retailers offer the largest and most diverse product portfolios?
+~~~sql
+WITH retailer_portfolio AS 
+    (SELECT
+        retailer,
+        COUNT(*) AS product_count,
+        COUNT(DISTINCT brand) AS brand_count,
+        ROUND(AVG(price), 2) AS avg_price,
+        COUNTIF(status = 'soldout') AS sold_out_products,
+        ROUND(COUNTIF(status = 'soldout') * 100.0 / COUNT(*),2) AS sold_out_rate
+    FROM `otto-ecommerce-analysis.otto_dataset_project.fact_products`
+    WHERE retailer IS NOT NULL
+    GROUP BY retailer)
+SELECT
+    retailer,
+    product_count,
+    brand_count,
+    avg_price,
+    sold_out_products,
+    sold_out_rate
+FROM retailer_portfolio
+ORDER BY product_count DESC, brand_count DESC;
+~~~
+Query Result:
+| Retailer | Product Count | Brand Count | Avg Price (€) | Sold-Out Products | Sold-Out Rate (%) |
+|----------|-------------:|------------:|--------------:|------------------:|------------------:|
+| OTTO | 426 | 280 | 337.51 | 107 | 25.12 |
+| Löchel Industriebedarf | 108 | 15 | 256.01 | 12 | 11.11 |
+| K. S. company GmbH | 90 | 1 | 16.80 | 6 | 6.67 |
+| Color-D Textile GmbH | 83 | 1 | 24.08 | 2 | 2.41 |
+| Home & Play | 55 | 1 | 27.17 | 0 | 0.00 |
+| DeinDesign | 49 | 1 | 23.28 | 0 | 0.00 |
+| schutzfolien24 | 38 | 3 | 14.84 | 0 | 0.00 |
+| mirapodo #ft5_slash# myToys | 34 | 30 | 43.14 | 1 | 2.94 |
+| atFoliX | 30 | 2 | 8.42 | 0 | 0.00 |
+| WE LOVE BAGS | 28 | 25 | 123.37 | 23 | 82.14 |
+
+**Full result table refers to file Result 5.2*
+
