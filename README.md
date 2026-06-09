@@ -53,3 +53,49 @@ The analysis follows these steps:
 5. Create dimension tables.
 6. Build a fact table as the main table for analysis.
 7. Use SQL queries to answer the business questions.
+
+## 4. Data cleaning and processing
+### 4.1 Staging table
+The raw OTTO dataset is loaded into a staging table to clean text fields, convert data types, and prepare the data for deduplication and modeling.
+~~~sql
+CREATE OR REPLACE TABLE `otto-ecommerce-analysis.otto_dataset_project.stg_otto_products` AS
+SELECT
+  TRIM(`Product title`) AS product_title,
+  TRIM(`Brand`) AS brand,
+  LOWER(TRIM(`Status`)) AS status,
+  CAST(`Limited` AS BOOL) AS limited,
+  TRIM(`Retailer`) AS retailer,
+  SAFE_CAST(`Formatted price` AS FLOAT64) AS formatted_price,
+  SAFE_CAST(`Ean` AS INT64) AS ean,
+  TRIM(`Moin`) AS moin,
+  SAFE_CAST(`Price` AS FLOAT64) AS price,
+  TRIM(`Description`) AS description,
+  TRIM(`Details`) AS details,
+  TRIM(`Images`) AS images,
+  TRIM(`Availability`) AS availability,
+  TRIM(`Breadcrumbs`) AS breadcrumbs,
+  TRIM(`Uniq id`) AS uniq_id,
+  `Scraped at` AS scraped_at,
+  TRIM(`Url`) AS url,
+  TRIM(`Pid`) AS pid
+FROM `otto-ecommerce-analysis.otto_dataset_project.Raw_otto_dataset`
+WHERE `Product title` IS NOT NULL;
+~~~
+Query Result:
+The staging table trims text fields, converts capital letters to lowercase, and standardizes the raw data for cleaning and analysis.
+
+### 4.2 Deduplication
+This step removes duplicate records by keeping the most recent entry for each product based on product ID, unique ID, title, brand, and retailer.
+~~~sql
+CREATE OR REPLACE TABLE `otto-ecommerce-analysis.otto_dataset_project.clean_otto_products` AS
+SELECT *
+FROM `otto-ecommerce-analysis.otto_dataset_project.stg_otto_products`
+QUALIFY ROW_NUMBER() OVER (
+  PARTITION BY pid, uniq_id, product_title, brand, retailer
+  ORDER BY scraped_at DESC
+) = 1;
+~~~
+Query Result:
+After deduplication, the table still contained 2,223 rows, identical to the original row count, which suggests the raw dataset was already mostly unique at this level of grouping.
+
+### 4.3 Dimension tables
