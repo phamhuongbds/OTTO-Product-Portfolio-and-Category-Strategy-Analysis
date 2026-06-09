@@ -320,4 +320,9 @@ Query Result:
 
 The results show that each retailer tends to have one or a few dominant brands, so assortment is often highly concentrated rather than evenly distributed. Examples include K. S. company GmbH with K-S-Trade (90 products), Color-D Textile GmbH with Abakuhaus (83), Home & Play with CALVENDO (55), and Löchel Industriebedarf with Reyher (50). This suggests these retailers are closely tied to a few core brands rather than operating as broad multi-brand assortments.
 
-## 6.Business recommendation
+## 6. Business recommendation
+- Differentiate brand strategy by price position. Value brands can be expanded to support volume, while premium brands should be emphasized in categories where customers are more willing to pay higher prices. Brands such as Reyher and vidaXL should be reviewed to check whether their premium pricing is supported by strong assortment value and visibility.
+- Prioritize key portfolio partners. Retailers such as OTTO, Löchel Industriebedarf, mirapodo / myToys, and heyconnect combine scale with brand depth and are therefore important partners. Retailers with strong concentration, such as K. S. company GmbH, Color-D Textile GmbH, Home & Play, and DeinDesign, should be reviewed to decide whether they should expand their brand mix or remain specialist sellers.
+- Address stock risk in large categories. Damen, Schuhe, Herren, Sport, and Kinder have meaningful product counts and noticeable sold-out rates, so these categories should be prioritized for replenishment and assortment planning.
+- Position limited products as a premium segment. Limited products appear to carry higher prices, so OTTO can highlight them more in merchandising and search placement. At the same time, OTTO should monitor whether the premium position affects conversion or requires targeted promotions.
+- Use brand concentration strategically. Retailers with a small number of dominant brands may be easier to scale when those brands perform well. Retailers with weak concentration or a very narrow mix should be reviewed to determine whether the current setup is too limited or already optimized.
