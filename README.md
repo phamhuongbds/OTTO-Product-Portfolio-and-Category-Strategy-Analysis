@@ -99,3 +99,78 @@ Query Result:
 After deduplication, the table still contained 2,223 rows, identical to the original row count, which suggests the raw dataset was already mostly unique at this level of grouping.
 
 ### 4.3 Dimension tables
+Dimension tables are created for brand, retailer, status, and category to store reusable descriptive attributes separately from the fact table, making the model cleaner, easier to query, and more suitable for future analysis.
+~~~sql
+CREATE OR REPLACE TABLE `otto-ecommerce-analysis.otto_dataset_project.otto_brand` AS
+SELECT DISTINCT brand
+FROM `otto-ecommerce-analysis.otto_dataset_project.clean_otto_products`
+WHERE brand IS NOT NULL;
+CREATE OR REPLACE TABLE `otto-ecommerce-analysis.otto_dataset_project.otto_retailer` AS
+SELECT DISTINCT retailer
+FROM `otto-ecommerce-analysis.otto_dataset_project.clean_otto_products`
+WHERE retailer IS NOT NULL;
+CREATE OR REPLACE TABLE `otto-ecommerce-analysis.otto_dataset_project.otto_status` AS
+SELECT DISTINCT status
+FROM `otto-ecommerce-analysis.otto_dataset_project.clean_otto_products`
+WHERE status IS NOT NULL;
+CREATE OR REPLACE TABLE `otto-ecommerce-analysis.otto_dataset_project.otto_category` AS
+SELECT DISTINCT
+  breadcrumbs
+FROM `otto-ecommerce-analysis.otto_dataset_project.clean_otto_products`
+WHERE breadcrumbs IS NOT NULL
+ORDER BY breadcrumbs;
+~~~
+### 4.4 Fact table
+This step builds the final fact table and extracts category levels from the breadcrumb path, creating a structured table for analysis.
+~~~sql
+CREATE OR REPLACE TABLE `otto-ecommerce-analysis.otto_dataset_project.fact_products` AS
+SELECT uniq_id,  pid,  product_title, brand, retailer, status, limited,  price, formatted_price, ean, availability, breadcrumbs,
+  SPLIT(TRIM(breadcrumbs), '|')[SAFE_OFFSET(0)] AS category_level_1,
+  SPLIT(TRIM(breadcrumbs), '|')[SAFE_OFFSET(1)] AS category_level_2,
+  SPLIT(TRIM(breadcrumbs), '|')[SAFE_OFFSET(2)] AS category_level_3,
+  SPLIT(TRIM(breadcrumbs), '|')[SAFE_OFFSET(3)] AS category_level_4,
+  SPLIT(TRIM(breadcrumbs), '|')[SAFE_OFFSET(4)] AS category_level_5,
+  SPLIT(TRIM(breadcrumbs), '|')[SAFE_OFFSET(5)] AS category_level_6,
+  scraped_at
+FROM `otto-ecommerce-analysis.otto_dataset_project.clean_otto_products`;
+~~~
+Query Result:
+The final fact table combines the cleaned OTTO product data with extracted category levels to create a structured dataset for analysis. Compared with the raw dataset, it removes unnecessary noise and organizes the remaining fields into a clear format that is easier to query and use for business reporting.
+
+| Column Name | Description |
+|------------|-------------|
+| uniq_id | Unique identifier assigned to each scraped record. |
+| pid | Unique product identifier assigned by the website. |
+| product_title | Name of the product listed on the website. |
+| brand | Brand or manufacturer of the product. |
+| retailer | Name of the retailer offering the product. |
+| status | Current status of the product (e.g., active, discontinued, sold out). |
+| limited | Indicates whether the product is a limited-edition item. |
+| price | Raw numerical product price value. |
+| formatted_price | Product price displayed in the website's formatted currency representation. |
+| ean| European Article Number (EAN) associated with the product. |
+| availability | Product stock or availability status at the time of data collection. |
+| breadcrumbs | Website navigation path indicating the product's category hierarchy. |
+| category_level_1 | Main department or top-level product category. |
+| category_level_2 | Secondary category within the main department. |
+| category_level_3 | More specific product group within the category hierarchy. |
+| category_level_4 | Subcategory or product family classification. |
+| category_level_5 | Narrower product segment within the hierarchy. |
+| category_level_6 | Most detailed category label available from the breadcrumb path. |
+| scraped_at | Timestamp indicating when the product information was collected from the website. |
+
+## 5. Business questions
+### 5.1 Which brands have the largest assortment and what is their pricing position?
+~~~sql
+WITH brand_summary AS (
+  SELECT brand,
+    COUNT(*) AS product_count,
+    ROUND(AVG(price),2) AS avg_price
+  FROM `otto-ecommerce-analysis.otto_dataset_project.fact_products`
+  WHERE brand IS NOT NULL
+    AND price IS NOT NULL
+  GROUP BY brand)
+SELECT *
+FROM brand_summary
+ORDER BY product_count DESC, avg_price DESC;
+~~~
