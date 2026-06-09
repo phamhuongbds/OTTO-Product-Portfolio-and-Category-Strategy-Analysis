@@ -231,3 +231,93 @@ Query Result:
 
 **Full result table refers to file Result 5.2*
 
+The table shows that OTTO is the dominant retailer, offering 426 products across 280 brands, significantly exceeding all other retailers in both assortment size and brand diversity. After OTTO, a small number of retailers maintain relatively large product portfolios, including Löchel Industriebedarf (108 products), K. S. company GmbH (90 products), and Color-D Textile GmbH (83 products). However, most retailers offer only a limited assortment, indicating that the marketplace relies heavily on a few key retail partners.
+
+### 5.3 Which categories have the highest sold-out rate?
+~~~sql
+SELECT
+  category_level_2,
+  COUNT(*) AS total_products,
+  COUNTIF(status = 'soldout') AS sold_out_products,
+  ROUND(SAFE_DIVIDE(COUNTIF(status = 'soldout'), COUNT(*)),2) AS sold_out_rate
+FROM `otto-ecommerce-analysis.otto_dataset_project.fact_products`
+WHERE category_level_2 IS NOT NULL
+GROUP BY category_level_2
+ORDER BY sold_out_rate DESC, total_products DESC;
+~~~
+Query Result:
+| Retailer | Product Count | Brand Count | Avg Price (€) | Sold-Out Products | Sold-Out Rate (%) |
+|----------|-------------:|------------:|--------------:|------------------:|------------------:|
+| OTTO | 426 | 280 | 337.51 | 107 | 25.12 |
+| Löchel Industriebedarf | 108 | 15 | 256.01 | 12 | 11.11 |
+| K. S. company GmbH | 90 | 1 | 16.80 | 6 | 6.67 |
+| Color-D Textile GmbH | 83 | 1 | 24.08 | 2 | 2.41 |
+| Home & Play | 55 | 1 | 27.17 | 0 | 0.00 |
+| DeinDesign | 49 | 1 | 23.28 | 0 | 0.00 |
+| schutzfolien24 | 38 | 3 | 14.84 | 0 | 0.00 |
+| mirapodo / myToys | 34 | 30 | 43.14 | 1 | 2.94 |
+| atFoliX | 30 | 2 | 8.42 | 0 | 0.00 |
+| WE LOVE BAGS | 28 | 25 | 123.37 | 23 | 82.14 |
+
+**Full result table refers to file Result 5.3*
+
+The table shows that a few categories, such as Kommunikation and Medien, show a 100% sold-out rate; however, these results are based on only one product and are not representative of overall demand. Among categories with meaningful product volumes, Damen records the highest number of sold-out products (88), followed by Herren (30) and Schuhe (22), indicating strong demand or potential inventory shortages. The relatively high sold-out rates in Damen (34%), Schuhe (30%), and Herren (27%) suggest that these categories may require closer inventory monitoring. 
+
+### 5.4 Do limited products have different pricing?
+~~~sql
+SELECT 
+  limited,
+  COUNT(*) AS product_count,
+  ROUND(AVG(price), 2) AS avg_price,
+  ROUND(MIN(price), 2) AS min_price,
+  ROUND(MAX(price), 2) AS max_price
+FROM `otto-ecommerce-analysis.otto_dataset_project.fact_products`
+WHERE price IS NOT NULL
+GROUP BY limited
+ORDER BY limited;
+~~~
+Query Result 
+| limited | Product Count | Avg Price (€) | Min Price (€) | Max Price (€) |
+|--------|-------------:|---------------:|--------------:|--------------:|
+| FALSE | 1701 | 142.58 | 1.09 | 22236.37|
+| TRUE | 522 | 189.45 | 5.20 | 14748.99 |
+
+The results show that limited products are priced higher on average than non-limited products. Limited items have an average price of €189.45, compared with €142.58 for regular products, and they also have a much higher maximum price, which suggests they are positioned as more premium or exclusive items.
+
+### 5.5 Which brands dominate within each retailer?
+~~~sql
+WITH brand_retailer AS 
+  (SELECT f.retailer, f.brand, COUNT(*) AS product_count
+  FROM `otto-ecommerce-analysis.otto_dataset_project.fact_products` f
+  LEFT JOIN `otto-ecommerce-analysis.otto_dataset_project.otto_retailer` r
+    ON f.retailer = r.retailer
+  WHERE f.retailer IS NOT NULL
+    AND f.brand IS NOT NULL
+  GROUP BY f.retailer, f.brand), ranked AS 
+  (SELECT *,  RANK() OVER ( PARTITION BY retailer
+      ORDER BY product_count DESC) AS brand_rank
+  FROM brand_retailer)
+SELECT *
+FROM ranked
+WHERE brand_rank <= 5
+ORDER BY retailer, brand_rank;
+~~~
+Query Result:
+| Retailer | Brand | Product Count | Brand Rank |
+|---|---|---:|---:|
+| 123moebel | White Label Living | 1 | 1 |
+| 1A PHOTO PORST | 1A PHOTO PORST | 1 | 1 |
+| 1a-Handelsagentur | euro3plast | 1 | 1 |
+| 2JB | ZERO G | 2 | 1 |
+| 3DEAL | Kickers | 1 | 1 |
+| 440s - for fourties | AM Design | 1 | 1 |
+| 440s - for fourties | 440s | 1 | 1 |
+| 440s - for fourties | Mars & More | 1 | 1 |
+| 4big.fun | Cheffinger | 1 | 1 |
+| 58 auf'm Kessel | 58 aufm Kessel | 1 | 1 |
+
+**Full result table refers to file Result 5.5*
+
+The results show that each retailer tends to have one or a few dominant brands, so assortment is often highly concentrated rather than evenly distributed. Examples include K. S. company GmbH with K-S-Trade (90 products), Color-D Textile GmbH with Abakuhaus (83), Home & Play with CALVENDO (55), and Löchel Industriebedarf with Reyher (50). This suggests these retailers are closely tied to a few core brands rather than operating as broad multi-brand assortments.
+
+## 6.Business recommendation
